@@ -1,18 +1,27 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import Products from './Products'
+// import PropTypes from 'prop-types';
 
 class Content extends Component{
     render(){
-        const {onIncrease} = this.props
+        const {products,handleClick} = this.props
         return(
-            <div style={{ margin: '20px' }}>
-                <button onClick ={onIncrease}>add to cart</button>
+            <div>            
+                {Object.keys(products).map((category, index) => (
+                    <Products
+                    key={index}
+                    category={category}
+                    products={products[category]}
+                    handleClick={handleClick}
+                    />
+                ))}
             </div>
+
         )
     }
 }
 
-Content.PropTypes = {
-    onIncrease: PropTypes.func,
-  };
+// Content.PropTypes = {
+//     onIncrease: PropTypes.func,
+//   };
 export default Content

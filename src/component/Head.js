@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 class Head extends Component {
   render() {
@@ -30,7 +30,7 @@ class Head extends Component {
   }
 }
 
-Head.PropTypes ={
-    'count': PropTypes.string,
-}
+// Head.PropTypes ={
+//     'count': PropTypes.string,
+// }
 export default Head;
