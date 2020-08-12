@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 class Head extends Component {
   render() {
@@ -18,19 +18,25 @@ class Head extends Component {
             display: 'flex',
             justifyContent: 'space-between',
             margin: '20px',
+            alignItems: 'center',
           }}
         >
-          <i className="material-icons" style={{ marginRight: '10px' }}>
+          <i
+            className="material-icons"
+            style={{ marginRight: '10px', color: 'white' }}
+          >
             shopping_cart
           </i>
-          <span className="count">{count}</span>
+          <span className="count" style={{ color: 'white' }}>
+            {count}
+          </span>
         </div>
       </div>
     );
   }
 }
 
-// Head.PropTypes ={
-//     'count': PropTypes.string,
-// }
+Head.propTypes = {
+  count: PropTypes.number,
+};
 export default Head;
